@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Trabalho de LP - 3º bimestre</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">CURSO DE GOLANG</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="generic.html">MÓDULO I</a></li>
+					<li><a href="generic2.html">MÓDULO II</a></li>
+					<li><a href="generic3.html">MÓDULO III</a></li>
+					<li><a href="generic4.html">MÓDULO IV</a></li>
+					<li><a href="https://www.youtube.com/watch?v=scry8621MWs">VÍDEOS</a></li>
+					<li><a href="index.html">PARTICIPANTES</a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<h1>MÓDULO  III: AVANÇADO</h1>
+			</div>
+
+					<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<div class="content">
+								<header>
+									<h2>SINTAXE</h2>
+								</header>
+								<p>Principais sintaxes da linguagem de programação Go (GoLang)</p>
+								<p>1. DECLARAÇÃO DE VARIÁVEIS: Go utiliza a palavra-chave `var` para declarar variáveis. Exemplo: `var nome string`.</p>
+								<p>2. ATRIBUIÇÃO DE VALORES: A atribuição é feita utilizando `=`. Exemplo: `nome = “João”`.</p>
+								<p>3. DECLARAÇÃO E INICIALIZAÇÃO DE VARIÁVEIS: Você pode declarar e atribuir valores simultaneamente: `idade := 25`.</p>
+								<p>4. TIPOS DE DADOS BÁSICOS: Go possui tipos como `int`, `float64`, `string`, `bool`, etc.</p>
+								<p>5. ESTRUTURAS DE CONTROLE:    <br>
+									- `if` para estruturas condicionais. <br>
+									- `for` para loops. <br>
+									- `switch` para seleção múltipla. 
+								 </p>
+								<p>6. FUNÇÕES: Declaração de função utiliza `func`. Exemplo: <br><br>
+									```go <br>
+									Func saudacao(nome string) { <br>
+										Fmt.Println(“Olá, “ + nome) <br>
+									} <br>					 
+								</p>
+								<p>7. PONTEIROS: Go permite o uso de ponteiros para acessar e modificar valores na memória.</p>
+								<p>8. STRUCTS: Você pode criar tipos de dados personalizados usando `struct`. Exemplo: <br><br>
+									```go <br>
+									Type Pessoa struct { <br>
+										Nome string <br>
+										Idade int <br>
+									} <br>
+								 </p>
+								<p>9. SLICES E ARRAYS: Go oferece slices dinâmicos e arrays estáticos para armazenar coleções de elementos.</p>
+								<p>10. PACOTES E IMPORTS: O código Go é organizado em pacotes. Usamos `import` para usar código de outros pacotes.</p>
+		
+								<hr />
+		
+								<h2>FUNÇÕES</h2>
+								<p>Principais funções e recursos da linguagem de programação Go (GoLang):</p>
+								<p>1. fmt Package: <br>
+									- `Println()`: Imprime no console com uma nova linha. <br>
+									- `Printf()`: Permite formatação de strings para impressão. <br>
+									- `Scanln()`: Lê entrada do usuário a partir do console. <br>
+								</p>
+								<p>2. strings Package: <br>
+									- `len()`: Retorna o comprimento de uma string. <br>
+									- `Concat()`: Concatena strings. <br>
+								</p>
+								<p>3. strconv Package: <br>
+									- `Atoi()`: Converte uma string para um inteiro. <br>
+									- `Itoa()`: Converte um inteiro para uma string. <br>
+								</p>
+								<p>4. math Package: <br>
+									- Funções matemáticas, como `Sqrt()`, `Abs()`, `Sin()`, `Cos()`, etc.
+								</p>
+								<p>5. time Package: <br>
+									- `Now()`: Retorna a hora atual. <br>
+									- `Sleep()`: Pausa a execução por um período de tempo. <br>
+								</p>
+								<p>6. os Package: <br>
+									- `Create()`: Cria um novo arquivo. <br>
+									- `Open()`: Abre um arquivo existente. <br>
+									- `Remove()`: Remove um arquivo. <br>
+								 </p>
+								<hr />
+		
+								<h2>PROGRAMAS EXEMPLO</h2>
+								<p>1-Vetor (Slice): <br><br>
+									package main <br><br>
+
+									Import “fmt” <br><br>
+									
+									Func main() { <br>
+										Numbers := []int{1, 2, 3, 4, 5} <br>
+										Fmt.Println(“Original slice:”, numbers) <br><br>
+									
+										// Adicionar um elemento ao slice <br>
+										Numbers = append(numbers, 6) <br>
+										Fmt.Println(“Slice after appending:”, numbers) <br><br>
+									
+										// Remover o primeiro elemento do slice <br>
+										Numbers = numbers[1:] <br>
+										Fmt.Println(“Slice after removing first element:”, numbers) <br><br>
+									
+										// Acessar elementos individuais <br>
+										Fmt.Println(“First element:”, numbers[0]) <br>
+										Fmt.Println(“Last element:”, numbers[len(numbers)-1]) <br>
+									}
+									</p>
+								<br><br><br>
+								<p>2-Criptografia: <br><br>           
+									package main <br><br>
+
+									Import ( <br>
+										“crypto/aes” <br>
+										“crypto/cipher”<br>
+										“crypto/rand” <br>
+										“fmt”<br>
+										“io”<br>
+									)<br><br>
+									
+									Func main() {<br>
+										Key := []byte(“0123456789abcdef”) // Chave de 16 bytes<br>
+										Plaintext := []byte(“Hello, encryption!”)<br><br>
+									
+										Block, err := aes.NewCipher(key)<br>
+										If err != nil {<br>
+											Fmt.Println(“Error:”, err)<br>
+											Return<br>
+										}<br><br>
+									
+										Ciphertext := make([]byte, aes.BlockSize+len(plaintext))<br>
+										Iv := ciphertext[:aes.BlockSize]<br>
+										If _, err := io.ReadFull(rand.Reader, iv); err != nil {<br>
+											Fmt.Println(“Error:”, err)<br>
+											Return<br>
+										}<br><br>
+									
+										Mode := cipher.NewCBCEncrypter(block, iv)<br>
+										Mode.CryptBlocks(ciphertext[aes.BlockSize:], plaintext)<br><br>
+									
+										Fmt.Println(“Ciphertext:”, ciphertext)<br>
+									}
+									</p>
+								<br><br><br>
+								<p>3- Matriz: <br>                                                                                     
+									package main<br><br>
+
+									Import “fmt”<br><br>
+									
+									Func main() {<br>
+										Rows, cols := 3, 3<br>
+										Matrix := make([][]int, rows)<br><br>
+									
+										For i := range matrix {<br>
+											Matrix[i] = make([]int, cols)<br>
+										}<br><br>
+									
+										// Preencher a matriz<br>
+										Value := 1<br>
+										For i := 0; i < rows; i++ {<br>
+											For j := 0; j < cols; j++ {<br>
+												Matrix[i][j] = value<br>
+												Value++<br>
+											}<br>
+										}<br><br>
+									
+										// Imprimir a matriz<br>
+										Fmt.Println(“Matrix:”)<br>
+										For i := 0; i < rows; i++ {<br>
+											Fmt.Println(matrix[i])<br>
+										}<br>
+									}
+									</p>
+								<hr />
+							</div>
+						</div>
+					</section>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<div class="content">
+							<section>
+								<h3>PROJETO</h3>
+								<p>Todo o projeto apresentado, incluindo o site e as video aulas, além, lógicamente de todo o conteúdo educacional, foi produzido e disponibilizado pelos alunos integrantes do grupo. O mesmo é baseado em cursos de programação e artigos encontrados na internet.</p>
+							</section>
+							<section>
+								<h4>INTEGRANTES</h4>
+								<ul class="alt">
+									<li>Ysabella Caroline</li>
+									<li>Matheus Muller</li>
+									<li>Giulia Mira</li>
+									<li>Julia Esbano</li>
+								</ul>
+							</section>
+							
+						</div>
+						<div class="copyright">
+							&copy; Todos direitos reservados à sala do Segundo ano de Automação - CTIG UNESP</a>.
+						</div>
+					</div>
+				</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

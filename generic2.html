@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Trabalho de LP - 3º bimestre</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a class="logo" href="index.html">CURSO DE GOLANG</a>
+				<nav>
+					<a href="#menu">Menu</a>
+				</nav>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="generic.html">MÓDULO I</a></li>
+					<li><a href="generic2.html">MÓDULO II</a></li>
+					<li><a href="generic3.html">MÓDULO III</a></li>
+					<li><a href="generic4.html">MÓDULO IV</a></li>
+					<li><a href="https://www.youtube.com/watch?v=scry8621MWs">VÍDEOS</a></li>
+					<li><a href="index.html">PARTICIPANTES</a></li>
+				</ul>
+			</nav>
+
+		<!-- Heading -->
+			<div id="heading" >
+				<h1>MÓDULO  II: INTERMEDIÁRIO</h1>
+			</div>
+
+			<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="inner">
+					<div class="content">
+						<header>
+							<h2>INSTALAÇÃO</h2>
+						</header>
+						<p>Para instalar o Go (ou Golang) no seu sistema, siga estes passos básicos:</p>
+						<p>1. BAIXAR: Visite o site oficial do Go em https://golang.org/dl/ e baixe a versão apropriada para o seu sistema operacional (Windows, macOS, Linux, etc.).</p>
+						<p>2. INSTALAR: Siga as instruções para a instalação que correspondem ao seu sistema operacional. Geralmente, isso envolve executar um instalador ou extrair o arquivo baixado para um diretório específico.</p>
+						<p>3. CONFIGURAR AMBIENTE: Adicione o diretório onde o Go foi instalado ao seu PATH. Isso permite que você execute comandos Go de qualquer diretório no terminal.</p>
+						<p>4. VERIFICAR: Abra um novo terminal e digite `go version`. Isso deve exibir a versão do Go que você instalou.</p>
+						<p>Com isso, você terá o GoLang instalado e estará pronto para começar a desenvolver em Go. Lembre-se de verificar a documentação oficial do Go para aprender mais sobre a linguagem e suas ferramentas.</p>
+
+						<hr />
+
+						<h2>CONFIGURAÇÕES</h2>
+						<p>Aqui estão algumas configurações importantes que podem ser usadas dentro de um programa escrito em Go (GoLang):</p>
+						<p>1. IMPORTAÇÃO DE PACOTES: Usando a declaração `import`, você traz pacotes externos para o seu programa. Isso permite que você acesse funcionalidades que não estão disponíveis no pacote principal.</p>
+						<p>2. CONSTANTES E VARIÁVEIS: Declare constantes usando `const` e variáveis usando `var`. Você pode especificar o tipo explicitamente ou deixar o compilador inferir o tipo usando `:=`.</p>
+						<p>3. FUNÇÕES: Defina funções usando a palavra-chave `func`. Você pode criar funções com parâmetros, retornos e, se necessário, nomear os parâmetros.</p>
+						<p>4. ESTRUTURAS DE CONTROLE: Use `if`, `else`, `switch` e loops (`for`) para controlar o fluxo do seu programa.</p>
+						<p>5. DEFER: A declaração `defer` é usada para adiar a execução de uma função até que a função envolvente seja concluída. Pode ser útil para limpeza de recursos ou manipulação de pânico.</p>
+						<p>6. PACOTE FLAG: O pacote `flag` permite que você defina flags de linha de comando para seu programa, permitindo que os usuários definam valores de configuração.</p>						
+						<p>7. PACOTE LOG: O pacote `log` facilita o registro de mensagens e informações do programa.</p>
+						<p>8. PERSONALIZAÇÃO: Você pode criar tipos de configuração personalizados usando structs para agrupar diferentes configurações e opções.</p>
+						<p>9. LEITURA DE ARQUIVOS DE CONFIG: Use pacotes como `os` e `io/ioutil` para ler arquivos de configuração externos e carregar configurações para o seu programa.</p>
+						<p>10. VARIÁVEIS DE AMBIENTE: O GoLang permite que você acesse variáveis de ambiente usando o pacote `os`. Isso pode ser útil para ajustar o comportamento do programa com base no ambiente de execução.</p>
+						<p>Lembre-se de que a implementação exata das configurações pode variar dependendo das necessidades do seu programa. Essas são apenas algumas das configurações e recursos que você pode usar para personalizar o comportamento do seu programa em Go.</p>
+						<hr />
+
+						<h2>PROGRAMAS BÁSICOS</h2>
+						<p>1. <br>
+							package main<br><br>
+							
+							import "fmt"<br><br>
+							
+							func main() {<br>
+								fmt.Println("Olá, mundo!")<br>
+							}
+							</p>
+						<br><br><br>
+						<p>2.<br>
+							package main<br><br>
+							
+							import (<br>
+								"fmt"<br>
+								"os"<br>
+								"strconv"<br>
+							)<br><br>
+							
+							func main() {<br>
+								fmt.Println("Digite o primeiro número:")<br>
+								num1Str := getUserInput()<br>
+								num1, err := strconv.Atoi(num1Str)<br>
+								if err != nil {<br>
+									fmt.Println("Erro ao converter o número:", err)<br>
+									return<br>
+								}<br><br>
+							
+								fmt.Println("Digite o segundo número:")<br>
+								num2Str := getUserInput()<br>
+								num2, err := strconv.Atoi(num2Str)fmt.Println("Erro ao converter o número:", err)<br>
+									return<br>
+								}<br><br>
+							
+								sum := num1 + num2<br>
+								fmt.Println("A soma dos números é:", sum)<br>
+							}<br><br>
+							
+							func getUserInput() string {<br>
+								var input string<br>
+								fmt.Scanln(&input)<br>
+								return input<br>
+							}<br>
+								if err != nil {
+							
+							</p>
+						<br><br><br>
+						<p>3.<br>
+							package main<br><br>
+							
+							import (<br>
+								"fmt"<br>
+								"os"<br>
+								"strconv"<br>
+							)
+							<br><br>
+							func main() {<br>
+								fmt.Println("Digite um número para calcular o fatorial:")<br>
+								numStr := getUserInput()<br>
+								num, err := strconv.Atoi(numStr)<br>
+								if err != nil {<br>
+									fmt.Println("Erro ao converter o número:", err)<br>
+									return<br>
+								}<br>
+							factorial := calculateFactorial(num)<br>
+								fmt.Printf("O fatorial de %d é %d\n", num, factorial)<br>
+							}<br><br>
+							
+							func calculateFactorial(n int) int {<br>
+								if n <= 0 {<br>
+									return 1<br>
+								}<br>
+								return n * calculateFactorial(n-1)<br>
+							}<br><br>
+							
+							func getUserInput() string {<br>
+								var input string<br>
+								fmt.Scanln(&input)<br>
+								return input<br>
+							}<br>
+							</p>
+						<hr />
+					</div>
+				</div>
+			</section>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<div class="content">
+							<section>
+								<h3>PROJETO</h3>
+								<p>Todo o projeto apresentado, incluindo o site e as video aulas, além, lógicamente de todo o conteúdo educacional, foi produzido e disponibilizado pelos alunos integrantes do grupo. O mesmo é baseado em cursos de programação e artigos encontrados na internet.</p>
+							</section>
+							<section>
+								<h4>INTEGRANTES</h4>
+								<ul class="alt">
+									<li>Ysabella Caroline</li>
+									<li>Matheus Muller</li>
+									<li>Giulia Mira</li>
+									<li>Julia Esbano</li>
+								</ul>
+							</section>
+							
+						</div>
+						<div class="copyright">
+							&copy; Todos direitos reservados à sala do Segundo ano de Automação - CTIG UNESP</a>.
+						</div>
+					</div>
+				</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
